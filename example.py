@@ -6,6 +6,7 @@
 
 from callMeBot.sendFreeMessage import sendFreeMessage
 
-isSuccess, response = sendFreeMessage("One line!\nAnother line.")
+CONFIG_FULL_FILENAME = './config.yml'
+isSuccess, response = sendFreeMessage("One line!\nAnother line.", CONFIG_FULL_FILENAME)
 print(f"{isSuccess}")
 print(f"{response}")

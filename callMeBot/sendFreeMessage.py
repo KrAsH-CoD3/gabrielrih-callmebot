@@ -10,11 +10,10 @@
 import requests
 import yaml
 
-CONFIG_FULL_FILENAME = 'callMeBot/config.yml'
 DEBUG_MODE = True # It simulates the send message function but in fact it doesn't send the message
 
-def sendFreeMessage(message):
-    configs, error  = _getConfigs()
+def sendFreeMessage(message, configFullFilename):
+    configs, error  = _getConfigs(configFullFilename)
     if error:
         return False, error
 
@@ -27,9 +26,9 @@ def sendFreeMessage(message):
             break
     return isSuccess, response # if error, returns the last error
 
-def _getConfigs():
+def _getConfigs(configFullFilename):
     try:
-        with open(CONFIG_FULL_FILENAME) as f:
+        with open(configFullFilename) as f:
             configs = yaml.load(f, Loader=yaml.FullLoader)
         return configs, None
     except:
