@@ -1,0 +1,5 @@
+# Cache
+__pycache__
+
+# Config file (Phone numbers + api keys)
+callMeBot/config.yml

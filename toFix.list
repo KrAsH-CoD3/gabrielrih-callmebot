@@ -1,0 +1,7 @@
+# FIX IT:
+
+- Situação de limite de mensagens enviadas.
+Returns:
+# true
+# <p>Message to: +555599620760<p>Text to send: One line!%0AAnother line.<p><b>ERROR: There is currently a limit of 25 messages per 240 minutes.<br>. Please try to reduce the number of messages sent. For example, group them into one message.</b>
+
