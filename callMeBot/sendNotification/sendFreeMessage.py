@@ -12,8 +12,8 @@ import yaml
 
 DEBUG_MODE = False # It simulates the send message function but in fact it doesn't send the message
 
-def sendFreeMessage(message, configFullFilename):
-    configs, error  = _getConfigs(configFullFilename)
+def sendFreeMessage(message, credentialFullFileName):
+    configs, error  = _getConfigs(credentialFullFileName)
     if error:
         return False, error
 
@@ -26,9 +26,9 @@ def sendFreeMessage(message, configFullFilename):
             break
     return isSuccess, response # if error, returns the last error
 
-def _getConfigs(configFullFilename):
+def _getConfigs(credentialFullFileName):
     try:
-        with open(configFullFilename) as f:
+        with open(credentialFullFileName) as f:
             configs = yaml.load(f, Loader=yaml.FullLoader)
         return configs, None
     except:

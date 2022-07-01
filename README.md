@@ -5,7 +5,7 @@ When you do it you'll receive a API Key for each phone number allowed.
 Reference: https://www.callmebot.com/blog/free-api-whatsapp-messages/
 
 - Then, you must inform the phone numbers and the api key in the configuration file.
-This config file must be created using the name "config.yml" in the "callMeBot" folder.
+This config file must be created using the name "credentials.yml" in the "config" folder.
 The structure must be like this and you can set more than one phone number:
 
 ```yaml

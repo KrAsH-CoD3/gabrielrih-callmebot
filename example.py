@@ -7,7 +7,7 @@
 from callMeBot.sendNotification.sendFreeMessage import sendFreeMessage
 
 # Send the message
-CONFIG_FULL_FILENAME = './config/config.yml'
+CONFIG_FULL_FILENAME = './config/credentials.yml'
 MESSAGE_TO_BE_SENT = "One line!\nAnother line."
 isSuccess, response = sendFreeMessage(MESSAGE_TO_BE_SENT, CONFIG_FULL_FILENAME)
 

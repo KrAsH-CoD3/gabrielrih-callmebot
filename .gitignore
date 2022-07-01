@@ -2,4 +2,4 @@
 __pycache__
 
 # Config file (Phone numbers + api keys)
-config.yml
+credentials.yml
