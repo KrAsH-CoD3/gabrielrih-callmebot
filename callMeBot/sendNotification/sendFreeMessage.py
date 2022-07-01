@@ -10,7 +10,7 @@
 import requests
 import yaml
 
-DEBUG_MODE = True # It simulates the send message function but in fact it doesn't send the message
+DEBUG_MODE = False # It simulates the send message function but in fact it doesn't send the message
 
 def sendFreeMessage(message, configFullFilename):
     configs, error  = _getConfigs(configFullFilename)
