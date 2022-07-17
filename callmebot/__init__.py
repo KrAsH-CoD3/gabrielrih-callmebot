@@ -1,1 +1,1 @@
-#import sendFreeMessage from callmebot
+from .messages import sendFreeMessage
