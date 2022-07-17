@@ -1,8 +1,9 @@
 # Sending free messages by WhatsApp
+from cgitb import enable
 import requests
 
 def send_free_notification(message, phoneNumber, apiKey, enableFakeMode = False):
-    if enableFakeMode == False:
+    if enableFakeMode == False or enableFakeMode == 'False':
         http_code, response = _callAPI(apiKey, phoneNumber, message)
         if http_code == 200:
             isSuccess = True
