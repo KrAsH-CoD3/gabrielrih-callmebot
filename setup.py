@@ -11,7 +11,7 @@ setuptools.setup(
     description='Testing installation of Package',
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url='https://github.com/gabrielrih/callMeBot',
+    url='https://github.com/gabrielrih/callmebot',
     license='MIT',
     packages=['callmebot'],
     install_requires=['requests', 'yaml'],
