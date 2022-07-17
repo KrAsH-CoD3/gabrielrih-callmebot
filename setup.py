@@ -14,5 +14,5 @@ setuptools.setup(
     url='https://github.com/gabrielrih/callMeBot',
     license='MIT',
     packages=['callmebot'],
-    install_requires=['requests, yaml'],
+    install_requires=['requests', 'yaml'],
 )
