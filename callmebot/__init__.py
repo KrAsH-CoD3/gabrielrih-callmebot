@@ -1,1 +1,1 @@
-from .messages import sendFreeMessage
+from .messages import send_free_notification

@@ -5,10 +5,10 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name='callmebot',
-    version='1.0.1',
+    version='1.0.0',
     author='Gabriel Richter',
     author_email='gabrielrih@gmail.com',
-    description='Testing installation of Package',
+    description='Send free WhatsApp messages',
     long_description=long_description,
     long_description_content_type="text/markdown",
     url='https://github.com/gabrielrih/callmebot',
