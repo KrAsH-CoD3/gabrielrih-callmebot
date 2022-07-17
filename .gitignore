@@ -1,5 +1,2 @@
 # Cache
 __pycache__
-
-# Config file (Phone numbers + api keys)
-credentials.yml
