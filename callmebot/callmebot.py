@@ -19,7 +19,6 @@ def sendFreeMessage(message, apiKey, phoneNumber):
     return isSuccess, response # if error, returns the last error
 
 def _callAPI(apiKey, phoneNumber, message):
-    
     if DEBUG_MODE == False:
         payload = {'phone': phoneNumber, 'text': message, 'apikey': apiKey}
         response = requests.get('https://api.callmebot.com/whatsapp.php', params=payload)

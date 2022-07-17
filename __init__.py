@@ -1,1 +1,0 @@
-from callmebot import sendFreeMessage
