@@ -8,32 +8,15 @@
 #
 
 import requests
-import yaml
 
 DEBUG_MODE = False # It simulates the send message function but in fact it doesn't send the message
 
-def sendFreeMessage(message, credentialFullFileName):
-    configs, error  = _getConfigs(credentialFullFileName)
-    if error:
-        return False, error
-
-    for config in configs: # Send the message for each phone number configured
-        http_code, response = _callAPI(config['apikey'], config['phone'], message)
-        if http_code == 200:
-            isSuccess = True
-        else:
-            isSuccess = False
-            break
+def sendFreeMessage(message, apiKey, phoneNumber):
+    http_code, response = _callAPI(apiKey, phoneNumber, message)
+    isSuccess = False
+    if http_code == 200:
+        isSuccess = True
     return isSuccess, response # if error, returns the last error
-
-def _getConfigs(credentialFullFileName):
-    try:
-        with open(credentialFullFileName) as f:
-            configs = yaml.load(f, Loader=yaml.FullLoader)
-        return configs, None
-    except:
-        error = "ERROR: Config file wasn't found! Check if the config file exists and if it has the right name."
-        return None, error
 
 def _callAPI(apiKey, phoneNumber, message):
     
