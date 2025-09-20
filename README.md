@@ -36,4 +36,4 @@ else:
     print(f"Failed to send: {response}")
 ```
 
-See `example.py` for a complete working example.
+See `example.py` for a detailed usage example.
