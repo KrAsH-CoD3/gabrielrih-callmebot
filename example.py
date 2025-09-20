@@ -1,7 +1,7 @@
 # Example of usage
 import os
 from dotenv import load_dotenv
-from callmebot.whatsapp import send_message, send_free_notification
+from callmebot import send_message, send_free_notification
 
 # Load environment variables
 load_dotenv()
