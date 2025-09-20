@@ -4,9 +4,6 @@ import requests
 import warnings
 from typing import Tuple
 
-# Create a session for connection reuse
-_session = requests.Session()
-
 
 def send_message(
     message: str, 
@@ -15,7 +12,7 @@ def send_message(
     enable_fake_mode: bool = False
 ) -> Tuple[bool, str]:
     """
-    Send a free WhatsApp message using CallMeBot API.
+    Send a WhatsApp message using CallMeBot API.
     
     Args:
         message: The message text to send
@@ -54,7 +51,7 @@ def _call_api(api_key: str, phone_number: str, message: str) -> Tuple[int, str]:
     url = "https://api.callmebot.com/whatsapp.php"
     
     try:
-        response = _session.get(url, params=payload, timeout=30)
+        response = requests.get(url, params=payload, timeout=30)
         return response.status_code, response.text
     except requests.RequestException as e:
         return 0, f"Request failed: {str(e)}"
