@@ -1,0 +1,15 @@
+[project]
+name = "callmebot"
+version = "1.0.2"
+description = "Send free WhatsApp messages"
+readme = "README.md"
+requires-python = ">=3.9,<4"
+dependencies = [
+    'requests>=2.32.5,<3',
+    'python-dotenv>=1.1.1,<2'
+]
+authors = [
+    {name = "Gabriel Richter", email = "gabrielrih@gmail.com"}
+]
+license = {text = "MIT"}
+urls = {Homepage = "https://github.com/gabrielrih/callmebot"}

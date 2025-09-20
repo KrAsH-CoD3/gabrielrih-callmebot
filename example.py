@@ -7,19 +7,26 @@ from callmebot.whatsapp import send_message, send_free_notification
 load_dotenv()
 
 # Send the message
-MESSAGE = "One line!\nAnother line\n*Bold text*\n_Italic text_."
+# Single-line message
+# MESSAGE = "One line!\nAnother line\n*Bold text*\n_Italic text_."
+
+# Multi-line message
+MESSAGE = """One line!
+Another line
+*Bold text*
+_Italic text_."""
 API_KEY = os.getenv('CALLMEBOT_APIKEY')
 PHONE_NUMBER = os.getenv('CALLMEBOT_PHONE_NUMBER')
 
 if not API_KEY or not PHONE_NUMBER:
     raise Exception("You must set the CALLMEBOT_API_KEY and CALLMEBOT_PHONE_NUMBER as environment variables.")
 
-# Deprecated `send_free_notification`
-# isSuccess, response = send_free_notification(MESSAGE, PHONE_NUMBER, API_KEY, False)
+# DEPRECATED: `send_free_notification`
+# is_success, response = send_free_notification(MESSAGE, PHONE_NUMBER, API_KEY, False)
 
-# New `send_message`
-isSuccess, response = send_message(MESSAGE, PHONE_NUMBER, API_KEY, False)
+# NEW: `send_message`
+is_success, response = send_message(MESSAGE, PHONE_NUMBER, API_KEY)
 
 # Print response
-print(f"{isSuccess}")
+print(f"{is_success}")
 print(f"{response}")

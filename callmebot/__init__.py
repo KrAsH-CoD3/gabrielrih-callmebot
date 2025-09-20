@@ -1,1 +1,1 @@
-from .messages import send_free_notification
+from .whatsapp import send_free_notification, send_message
