@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name='callmebot',
-    version='1.0.1',
+    version='1.0.2',
     author='Gabriel Richter',
     author_email='gabrielrih@gmail.com',
     description='Send free WhatsApp messages',
@@ -14,5 +14,5 @@ setuptools.setup(
     url='https://github.com/gabrielrih/callmebot',
     license='MIT',
     packages=['callmebot'],
-    install_requires=['requests'],
+    install_requires=['requests>=2.32.5,<3', 'python-dotenv>=1.1.1,<2'],
 )
